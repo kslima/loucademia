@@ -14,5 +14,13 @@ public class StringUtils {
         return String.format("%0" + finalSize + "d", value);
     }
 
+    public static String doubleToString(String value){
+        try {
+            return Double.toString(value);
+        } catch (){
+            throw new ValidatioException("Não é possivel converter para numero");
+        }
+    }
+
 
 }
